@@ -1,0 +1,40 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Usuarios Registrados</h2>
+      <p>Lista de usuarios registrados en el sistema.</p>
+    </div>
+  </div>
+<div class="container">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Cedula</th>
+        <th>Telefono</th>
+        <th>Direccion</th>
+        <th>Correo</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let usuario of usuarios">
+        <td>{{ usuario.idusuario }}</td>
+        <td>{{ usuario.nombreusuario }}</td>
+        <td>{{ usuario.cedulausuario }}</td>
+        <td>{{ usuario.telefonousuario }}</td>
+        <td>{{ usuario.direccionusuario }}</td>
+        <td>{{ usuario.correousuario }}</td>
+        <td>
+            <button class="btn btn-primary" (click)="editarUsuario(usuario.idusuario)">Editar</button>
+            <button class="btn btn-danger" (click)="eliminarUsuario(usuario.idusuario)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="text-center mt-3">
+    <button class="btn btn-success" (click)="insertarUsuario()">Crear Usuario</button>
+    <button class="btn btn-primary" (click)="buscarUsuario()">Buscar Usuario</button>
+  </div>
+</div>

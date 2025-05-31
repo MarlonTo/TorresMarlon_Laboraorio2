@@ -1,0 +1,36 @@
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-12">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInput" placeholder="1234567890" [(ngModel)]="cedula">
+                <label for="floatingInput">Buscar</label>
+            </div>
+            
+            <button type="button" class="btn btn-primary" (click)="getUsuarioByCedula()">Buscar</button>
+
+            <div class="input-group mt-3">
+                <span class="input-group-text" id="basic-addon1">Nombre</span>
+                <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre" aria-describedby="basic-addon1" readonly [(ngModel)]="nombre">
+            </div>
+            <div class="input-group mt-3">
+                <span class="input-group-text" id="basic-addon1">Cedula</span>
+                <input type="text" class="form-control" placeholder="Cedula" aria-label="Cedula" aria-describedby="basic-addon1" readonly [(ngModel)]="cedula">
+            </div>
+            <div class="input-group mt-3">
+                <span class="input-group-text" id="basic-addon1">Direccion</span>
+                <input type="text" class="form-control" placeholder="Direccion" aria-label="Direccion" aria-describedby="basic-addon1" readonly [(ngModel)]="direccion">
+            </div>
+            <div class="input-group mt-3">
+                <span class="input-group-text" id="basic-addon1">Telefono</span>
+                <input type="text" class="form-control" placeholder="Telefono" aria-label="Telefono" aria-describedby="basic-addon1" readonly [(ngModel)]="telefono">
+            </div>
+            <div class="input-group mt-3">
+                <span class="input-group-text" id="basic-addon1">Correo</span>
+                <input type="text" class="form-control" placeholder="Correo" aria-label="Correo" aria-describedby="basic-addon1" readonly [(ngModel)]="correo">
+            </div>
+        </div>
+    </div>
+     <div class="text-center mt-3">
+        <button class="btn btn-success" (click)="verUsuarios()">Regresar</button>
+    </div>
+</div>

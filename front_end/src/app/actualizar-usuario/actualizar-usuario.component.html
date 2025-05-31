@@ -1,0 +1,30 @@
+<p>actualizar-usuario works!</p>
+<div class="container mt-4">
+  <h2>Actualizar Usuario</h2>
+
+  <form (ngSubmit)="actualizar()">
+    <div class="mb-3">
+      <label>Nombre</label>
+      <input type="text" [(ngModel)]="nombre" name="nombre" class="form-control" required />
+    </div>
+    <div class="mb-3">
+      <label>Cédula</label>
+      <input type="text" [(ngModel)]="cedula" name="cedula" class="form-control" required />
+    </div>
+    <div class="mb-3">
+      <label>Teléfono</label>
+      <input type="text" [(ngModel)]="telefono" name="telefono" class="form-control" />
+    </div>
+    <div class="mb-3">
+      <label>Dirección</label>
+      <input type="text" [(ngModel)]="direccion" name="direccion" class="form-control" />
+    </div>
+    <div class="mb-3">
+      <label>Correo</label>
+      <input type="email" [(ngModel)]="correo" name="correo" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+    <button type="button" class="btn btn-secondary" (click)="cancelar()">Cancelar</button>
+  </form>
+</div>

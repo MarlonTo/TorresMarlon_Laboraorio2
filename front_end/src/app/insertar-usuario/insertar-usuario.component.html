@@ -1,0 +1,29 @@
+<div class="container mt-3">
+    <div class="row">
+        <div class="col">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInput" placeholder="1234567890" [(ngModel)]="nombre">
+                <label for="floatingInput">Nombre</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInput" placeholder="1234567890" [(ngModel)]="cedula">
+                <label for="floatingInput">Cedula</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInput" placeholder="1234567890" [(ngModel)]="telefono">
+                <label for="floatingInput">Telefono</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInput" placeholder="1234567890" [(ngModel)]="direccion">
+                <label for="floatingInput">Direccion</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInput" placeholder="1234567890" [(ngModel)]="correo">
+                <label for="floatingInput">Correo</label>
+            </div>
+            <button type="button" class="btn btn-primary" (click)="saveNewUsuarioOnBDD()">Insertar</button>
+            <button class="btn btn-success" (click)="verUsuarios()">Regresar</button>
+
+        </div>
+    </div>
+</div>

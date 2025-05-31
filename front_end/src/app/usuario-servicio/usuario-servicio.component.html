@@ -1,0 +1,35 @@
+<div *ngIf="loading" class="text-center my-4">
+  <div class="spinner-border text-primary" role="status">
+    <span class="visually-hidden">Cargando...</span>
+  </div>
+</div>
+
+<div *ngIf="!loading && usuario && !usuario.error && usuario.nombreusuario; else errorBlock" class="card shadow-lg">
+  <div class="card-body">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">
+        <i class="bi bi-person-fill me-2 text-primary"></i>
+        <strong>Nombre:</strong> {{ usuario.nombreusuario }}
+      </li>
+      <li class="list-group-item">
+        <i class="bi bi-telephone-fill me-2 text-success"></i>
+        <strong>Teléfono:</strong> {{ usuario.telefonoucsuario }}
+      </li>
+      <li class="list-group-item">
+        <i class="bi bi-house-door-fill me-2 text-warning"></i>
+        <strong>Dirección:</strong> {{ usuario.direccionusuario }}
+      </li>
+      <li class="list-group-item">
+        <i class="bi bi-envelope-fill me-2 text-danger"></i>
+        <strong>Correo:</strong> {{ usuario.correousuario }}
+      </li>
+    </ul>
+  </div>
+</div>
+
+<ng-template #errorBlock>
+  <div class="alert alert-danger mt-4 text-center">
+    <i class="bi bi-exclamation-triangle-fill me-2"></i>
+    {{ usuario?.error || 'No se pudo cargar la información del usuario.' }}
+  </div>
+</ng-template>
